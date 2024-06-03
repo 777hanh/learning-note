@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "server",
   "version": "1.0.0",
   "description": "",
@@ -21,4 +22,34 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
+=======
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js",
+        "server": "node index",
+        "vercel-login": "vercel login",
+        "vercel-dev": "vercel dev -y --listen 5000 ",
+        "vercel-deploy": "vercel",
+        "vercel-prod": "vercel --prod"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@vercel/node": "^3.1.6",
+        "argon2": "^0.28.3",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.14",
+        "vercel": "^34.2.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+>>>>>>> fb039f5 (feat: add vercel package to deploy)
 }

@@ -1,26 +1,25 @@
-import { useContext } from "react";
-import { Navigate } from 'react-router-dom'
-import Spinner from "react-bootstrap/Spinner"
-import Login from "./../components/auth/LoginForm";
-import Register from "./../components/auth/RegisterForm";
+import { useContext } from 'react';
+import { Navigate } from 'react-router-dom';
+// eslint-disable-next-line
+import Spinner from 'react-bootstrap/Spinner';
+import Login from './../components/auth/LoginForm';
+import Register from './../components/auth/RegisterForm';
 import { AuthContext } from './../contexts/AuthContext';
 
 const Auth = ({ authRoute }) => {
-
-    const { authState: { authLoading, isAuthenticated } } = useContext(AuthContext)
-    let body
-    if (isAuthenticated) return <Navigate replace to='/dashboard' />
+    const {
+        // eslint-disable-next-line
+        authState: { authLoading, isAuthenticated },
+    } = useContext(AuthContext);
+    let body;
+    if (isAuthenticated) return <Navigate replace to="/dashboard" />;
     else {
         body = (
             <>
-                {
-                    authRoute === 'login' && <Login />
-                }
-                {
-                    authRoute === 'register' && <Register />
-                }
+                {authRoute === 'login' && <Login />}
+                {authRoute === 'register' && <Register />}
             </>
-        )
+        );
     }
 
     return (
@@ -37,8 +36,7 @@ const Auth = ({ authRoute }) => {
                 </div>
             </div>
         </>
+    );
+};
 
-    )
-}
-
-export default Auth
+export default Auth;
